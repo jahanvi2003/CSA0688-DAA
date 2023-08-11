@@ -1,0 +1,22 @@
+#include<stdio.h>	
+int fab(int n)
+{
+   if(n<0)
+	return n;
+else
+ return fab(n-1)*fab(n-2);
+}
+int main()
+{
+	int n,n1=0,n2=1,n3,i;
+	printf("enter number");
+	scanf("%d",&n);
+	printf("fibnoci series are:%d,%d",n1,n2);
+	for(i=2;i<=n;i++)
+	{
+		n3=n1+n2;
+		n1=n2;
+		n2=n3;
+		printf("%d ,",n3);          
+	}
+}
